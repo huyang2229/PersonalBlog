@@ -1,0 +1,640 @@
+
+<!-- saved from url=(0043)http://changyan.kuaizhan.com/setting/common -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>通用基本配置</title>
+<script type="text/javascript" async="" src="./通用基本配置_files/vds.js"></script><script src="./通用基本配置_files/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="./通用基本配置_files/bootstrap.js"></script>
+<script type="text/javascript" src="./通用基本配置_files/head-bar-common.js"></script>
+<link rel="shortcut icon" href="http://changyan.sohu.com/favicon.ico">
+<link rel="stylesheet" type="text/css" href="./通用基本配置_files/reset.css">
+<link rel="stylesheet" type="text/css" href="./通用基本配置_files/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="./通用基本配置_files/bootstrap-responsive.min.css">
+<link rel="stylesheet" type="text/css" href="./通用基本配置_files/main.css">
+<link rel="stylesheet" type="text/css" href="./通用基本配置_files/head-sidebar.css">
+
+<script type="text/javascript" src="./通用基本配置_files/plupload.js"></script>
+<script type="text/javascript" src="./通用基本配置_files/plupload.html5.js"></script>
+<script type="text/javascript" src="./通用基本配置_files/plupload.flash.js"></script>
+<script type="text/javascript" src="./通用基本配置_files/jquery.validate.js"></script>
+</head>
+<body style="">
+   <div class="head clear">
+   	    <div class="head-logo">
+        </div>
+        <!--2017-08-25 添加growingio代码-->
+
+<!--[if (gte IE 9)|(!IE)]> -->
+<script type="text/javascript">
+    var _vds = _vds || [];
+    window._vds = _vds;
+    (function () {
+        _vds.push(['setAccountId', '824293925c3c8880']);
+        (function () {
+            var vds = document.createElement('script');
+            vds.type = 'text/javascript';
+            vds.async = true;
+            vds.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'dn-growing.qbox.me/vds.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(vds, s);
+        })();
+    })();
+
+</script>
+
+<!--[endif]---->
+<script>var isVip='false'</script>
+<div class="head-nav">
+             <ul>
+                <li><a href="http://changyan.kuaizhan.com/download/" target="_blank">下载中心</a></li>
+                <li><a href="http://changyan.kuaizhan.com/static/help/" target="_blank">帮助中心</a></li>
+                                <li style="position:relative;" class="notice-li">
+                    <span class="notice-text">通知消息</span> <span class="notice-count" id="notice-count">15</span>                                         <div class="notice-info-prop">
+                                                                                                        <div class="single-notice-info"><span>ICP备案号通知【20时52分25秒】</span><a href="http://changyan.kuaizhan.com/setting/common#" data-name="ICP备案号通知【20时52分25秒】" data-category="3" class="notice-show-alert notice-click">点击查看</a></div>
+                                                                                                            <div class="single-notice-info"><span>域名白名单通知【20时52分25秒】</span><a href="http://changyan.kuaizhan.com/setting/common#" data-name="域名白名单通知【20时52分25秒】" data-category="3" class="notice-show-alert notice-click">点击查看</a></div>
+                                                                                                            <div class="single-notice-info"><span>ICP备案号通知【20时57分46秒】</span><a href="http://changyan.kuaizhan.com/setting/common#" data-name="ICP备案号通知【20时57分46秒】" data-category="3" class="notice-show-alert notice-click">点击查看</a></div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <div class="notice-show-all"><a href="http://changyan.kuaizhan.com/notice/list/all/1">查看更多</a></div>
+                    </div>
+                                    </li>
+                                <li>
+                    <div style="text-align:center;">
+                           <span>当前站点:</span>
+                                                      <select id="isvs" style="width:120px;margin-left:4px;position:relative;top:3px;">
+                                                                    <option value="1086383" data-name="胡洋的个人博客" selected="">胡洋的个人博客</option>
+                                                           </select>
+                                               </div>
+                </li>
+                <li class="head-account" style="position:relative;">
+                    <div class="head-user-name">15817406269&nbsp;<img src="./通用基本配置_files/arrow.png" height="5" width="8" alt=""> </div>
+                    <div class="head-account-link">
+                                            <div class="head-account-link-w"><span><a href="http://changyan.kuaizhan.com/setting/account-info">账号管理</a></span></div>
+                                            <div class="head-account-link-w"><span><a href="http://changyan.kuaizhan.com/logout">退出登录</a></span></div>
+                    </div>
+                </li>
+             </ul>                  
+        </div> 
+        
+<script type="text/javascript">
+(function(){
+    
+    $('#isvs').change(function(){
+            var isv_id = jQuery(this).val();
+            var name = jQuery('#isvs').find('option:selected').data('name');
+            jQuery.ajax({
+                url: '/change-isv/'+isv_id,
+                type: 'get',
+                dataType: 'json',
+                success: function(data) {
+                    if(!data.success) {
+                        alert(data.msg);
+                    } else {
+                        alert('已帮您切换到： '+name+' 站点');
+                        window.location.href = '/login';
+                    }
+                }
+            });
+     });
+        
+        
+    $('.notice-click').on('click', function(){
+         var name = $(this).data('name');
+         var category = $(this).data('category');
+         if($('#'+name).length > 0) {
+            $('#'+name).modal('show');
+            return ;
+         }
+         var noticeCount = $('#notice-count').text();
+         var noticeCountAfter = $('#nocache-notice-count').text();
+
+         if(noticeCount>0) {
+             noticeCount = noticeCount-1;
+         }
+         $('#notice-count').text(noticeCount);
+         
+         if(noticeCountAfter>0) {
+             noticeCountAfter = noticeCountAfter-1;
+         }
+         $('#nocache-notice-count').text(noticeCountAfter);
+
+         if(noticeCount>0){
+            $(this).parent().remove();
+         } else {
+            $('#notice-count').remove();
+            $(this).parent().parent().remove();
+         }
+         $.ajax({
+            url:'/notice/queryNotice',
+            data : {
+               name : name,
+               category : category
+            },
+            success : function(data){
+               $('body').append(data.html);
+               $('#'+data.name).modal('show');
+            },
+            dataType : 'json'
+         });
+     })
+})(jQuery);
+</script>    </div>
+   <div class="container-self" style="height: 1427px;">
+                 <div class="side-bar" style="height: 1427px;">
+            <ul class="side-bar-ul">
+                 <li class="over-view "><img class="side-bar-icon" src="./通用基本配置_files/icon1.png" alt=""><a href="http://changyan.kuaizhan.com/overview" style="color:white;text-decoration:none;">后台总览</a></li>
+                 <li class="comment-audit-li " node-type="side-li"><div class="close-arrow"></div><img class="side-bar-icon" src="./通用基本配置_files/icon2.png" alt=""><span>评论审核</span></li>
+                 <ul class="comment-audit-nav  hide ">
+                                             <li class="right-sub-li "><a href="http://changyan.kuaizhan.com/audit/comments/TOAUDIT/1" style="text-indent:25px;">
+                                                      <span class="no-audit-number"></span>
+                                                      <span style="text-indent:0px;">本站评论审核</span></a></li>
+                                          <li class="right-sub-li "><a href="http://changyan.kuaizhan.com/audit/comments/img/TOAUDIT_IMG/1" style="text-indent:25px;">
+                                                      <span class="no-audit-number"></span>
+                                                      <span style="text-indent:0px;">图片评论审核</span></a></li>
+                                          <li class="right-sub-li "><a href="http://changyan.kuaizhan.com/audit/comments/lt/LT_TOAUDIT/1" style="text-indent:25px;">
+                                                      <span class="no-audit-number"></span>
+                                                      <span style="text-indent:0px;">联通评论审核</span></a></li>
+                                          <li class="right-sub-li "><a href="http://changyan.kuaizhan.com/audit/comments/SYS_REPORT/1" style="text-indent:25px;">
+                                                      <span class="no-audit-number"></span>
+                                                      <span style="text-indent:0px;">举报评论审核</span></a></li>
+                     <li class="right-sub-li "><a href="http://changyan.kuaizhan.com/audit/comments/SYS_APPEAL/1" style="text-indent:25px;">
+                                                     <span class="no-audit-number"></span>
+                                                      <span style="text-indent:0px;">申诉评论审核</span></a></li>
+                 </ul>
+                 <li class="comment-manage-li " node-type="side-li"><div class="close-arrow"></div><img class="side-bar-icon" src="./通用基本配置_files/icon3.png" alt="">评论管理</li>
+                 <ul class="comment-manage-nav  hide ">
+                     <li class="right-sub-li "><a href="http://changyan.kuaizhan.com/search/page">评论搜索</a></li>
+                     <li class="right-sub-li "><a href="http://changyan.kuaizhan.com/frozen/blackname/list/1">黑名单</a></li>
+                     <li class="right-sub-li "><a href="http://changyan.kuaizhan.com/whitename/list/1">白名单</a></li>
+                     <li class="right-sub-li "><a href="http://changyan.kuaizhan.com/filter-word/sensitive-word/list/1">过滤词库</a></li>
+                     <li class="right-sub-li "><a href="http://changyan.kuaizhan.com/operation/recommender">评论联通</a></li>
+                     <li class="right-sub-li "><a href="http://changyan.kuaizhan.com/operation/flood/1">评论灌水</a></li>
+                     <li class="right-sub-li "><a href="http://changyan.kuaizhan.com/install/import">评论导入</a></li>
+                     <li class="right-sub-li "><a href="http://changyan.kuaizhan.com/install/export">评论导出</a></li>
+                     <li class="right-sub-li "><a href="http://changyan.kuaizhan.com/install/plugin-help">前台管理助手</a></li>
+                 </ul>
+                                      <li class="comment-stat-li " node-type="side-li"><div class="close-arrow"></div><img class="side-bar-icon" src="./通用基本配置_files/icon4.png" alt="">评论统计</li>
+                     <ul class="comment-stat-nav  hide ">
+                         <li class="right-sub-li "><div class="blue-verticle-line-display"></div><a href="http://changyan.kuaizhan.com/stat-data/comment">评论趋势</a></li>
+                         <li class="right-sub-li "><div class="blue-verticle-line-display"></div><a href="http://changyan.kuaizhan.com/stat-data/day-comment">24小时评论趋势</a></li>
+                         <li class="right-sub-li "><div class="blue-verticle-line-display"></div><a href="http://changyan.kuaizhan.com/stat-data/topic">热门文章</a></li>
+                                              </ul>
+                                                   <li class="common-setting-li  li-active " node-type="side-li"><div class="open-arrow"></div><img class="side-bar-icon" src="./通用基本配置_files/icon5.png" alt="">系统设置</li>
+                 <ul class="common-setting-nav ">
+                     <li class="right-sub-li  current "><div class="blue-verticle-line-display"></div><a href="http://changyan.kuaizhan.com/setting/common">通用设置</a></li>
+                     <li class="right-sub-li "><div class="blue-verticle-line-display"></div><a href="http://changyan.kuaizhan.com/setting/pc/single_sign">PC版设置</a></li>
+                     <li class="right-sub-li "><div class="blue-verticle-line-display"></div><a href="http://changyan.kuaizhan.com/setting/wap/single_sign">WAP版设置</a></li>
+                 </ul>
+                                  <li class="labs-plugin-li " node-type="side-li"><div class="close-arrow"></div><img class="side-bar-icon" src="./通用基本配置_files/icon6.png" alt="">实验室</li>
+                 <ul class="labs-plugin-nav  hide ">
+                     <li class="right-sub-li "><a href="http://changyan.kuaizhan.com/labs/list">插件列表</a></li>
+                     <li class="right-sub-li "><a href="http://changyan.kuaizhan.com/labs/hotnews">热门新闻</a></li>
+                     <li class="right-sub-li "><a href="http://changyan.kuaizhan.com/labs/reping">热门评论</a></li>
+                     <li class="right-sub-li "><a href="http://changyan.kuaizhan.com/labs/hotusers">热评用户</a></li>
+                     <li class="right-sub-li "><a href="http://changyan.kuaizhan.com/labs/qing">轻评论</a></li>
+                     <li class="right-sub-li "><a href="http://changyan.kuaizhan.com/labs/wallsplugin">热文配图</a></li>
+                     <li class="right-sub-li "><a href="http://changyan.kuaizhan.com/labs/emoji">评论表情</a></li>
+                     <li class="right-sub-li "><a href="http://changyan.kuaizhan.com/labs/pk">辩论</a></li>
+                     <li class="right-sub-li "><a href="http://changyan.kuaizhan.com/labs/poll">投票</a></li>
+                     <li class="right-sub-li "><a href="http://changyan.kuaizhan.com/labs/reward">打赏</a></li>
+                     <li class="right-sub-li "><a href="http://changyan.kuaizhan.com/labs/hotnewswall">新闻墙</a></li>
+                 </ul>
+                                  <li class="advert-manage-li " node-type="side-li"><div class="close-arrow" node-type="side-li"></div><img class="side-bar-icon" src="./通用基本配置_files/icon7.png" alt="">广告服务</li>
+                 <ul class="advert-manage-nav  hide ">
+                     <li class="right-sub-li "><a href="http://changyan.kuaizhan.com/cyad/main">数据概览</a></li>
+                     <li class="right-sub-li "><div class="blue-verticle-line-display"></div><a href="http://changyan.kuaizhan.com/cyad/setting">广告设置</a></li>
+                     <li class="right-sub-li "><div class="blue-verticle-line-display"></div><a href="http://changyan.kuaizhan.com/cyad/finance">财务管理</a></li>
+                 </ul>
+                                  <li class="install-changyan-li " node-type="side-li"><div class="close-arrow"></div><img class="side-bar-icon" src="./通用基本配置_files/icon8.png" alt="">安装畅言</li>
+                 <ul class="install-changyan-nav  hide ">
+                     <li class="right-sub-li "><a href="http://changyan.kuaizhan.com/install/code/pc">通用代码安装</a></li>
+                     <li class="right-sub-li "><a href="http://changyan.kuaizhan.com/install/code/plugin-install">插件安装</a></li>
+                     <li class="right-sub-li "><a href="http://changyan.kuaizhan.com/install/code/android-install">SDK开发包</a></li>
+                     <li class="right-sub-li "><a href="http://changyan.kuaizhan.com/install/code/comment-count-code">获取评论数代码</a></li>
+                 </ul>
+                                  <li class="zhanghao-manage-li " node-type="side-li"><div class="close-arrow"></div><img class="side-bar-icon" src="./通用基本配置_files/icon9.png" alt="">账号管理</li>
+                 <ul class="zhanghao-manage-nav  hide ">
+                     <li class="right-sub-li "><a href="http://changyan.kuaizhan.com/setting/account-info">账号信息</a></li>
+                     <li class="right-sub-li "><a href="http://changyan.kuaizhan.com/setting/common/isv-mgr">管理站点</a></li>
+                     <li class="right-sub-li "><a href="http://changyan.kuaizhan.com/setting/common/to-be-vip">高级审核功能</a></li>
+                 </ul>
+                                                   <li class="notice-manage-li " node-type="side-li"><div class="close-arrow"></div><img class="side-bar-icon" src="./通用基本配置_files/icon10.png" alt="">消息中心</li>
+                 <ul class="notice-manage-nav  hide ">
+                     <li class="right-sub-li "><a href="http://changyan.kuaizhan.com/notice/list/unread/1">未读消息</a></li>
+                     <li class="right-sub-li "><a href="http://changyan.kuaizhan.com/notice/list/read/1">已读消息</a></li>
+                     <li class="right-sub-li "><a href="http://changyan.kuaizhan.com/notice/list/all/1">全部消息</a></li>
+                 </ul>
+                                                   <li class="forum-setting-li " node-type="side-li"><div class="open-arrow"></div><img class="side-bar-icon" src="./通用基本配置_files/icon5.png" alt="">社区管理</li>
+            </ul>
+ </div>
+        <div class="content">
+              <div class="common-area-wrapper">
+                 
+                  <ul class="second-nav">
+                      <li><div class="blue-horizontal-line active current"></div><a href="http://changyan.kuaizhan.com/setting/common">基本设置</a></li>
+                      <li><div class="blue-horizontal-line"></div><a href="http://changyan.kuaizhan.com/setting/common/further">高级设置</a></li>
+                  </ul>
+
+                  <div class="common-area" style="padding-top:0px;">
+                     <div class="common-area-title">网站基本信息</div>
+                        <form id="config_form" class="form-horizontal config-form" onsubmit="return false;" novalidate="novalidate">
+                            <div class="control-group">
+                                <label class="control-label" for="isvName"><strong>站点名称</strong></label>
+                                <div class="controls">
+                                    <input class="input-xlarge" type="text" id="isvName" value="胡洋的个人博客" data-rule-name="true" data-msg="请输入正确站点名称" placeholder="示列:搜狐网">
+                                    <small class="help-block" style="margin-top:5px;margin-top:5px;">为了便于管理，请填写站点名称，不超过15个字</small>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label" for="isvUrl"><strong>站点网址</strong></label>
+                                <div class="controls">
+                                    <input class="input-xlarge" type="text" id="isvUrl" value="https://www.imhuyang.com" data-msg="请输入正确url" placeholder="示列:http://www.sohu.com" style="background-color: rgb(255, 255, 255);">
+                                    <small class="help-block" style="margin-top:5px;margin-top:5px;">如果你只有app,无法提供站点地址，请勾选 <input type="checkbox" name="onlyApp"></small>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label" for="icp"><strong>ICP备案号</strong></label>
+                                <div class="controls">
+                                    <input class="input-xlarge" type="text" id="icp" value="粤ICP备17107427号-1" disabled="disabled" style="background-color: rgb(227, 227, 227);">
+                                    <small class="margin-l-20" style="color:blue">
+                                                                                                                         <img src="./通用基本配置_files/pass.png">
+                                                                                                                  </small>
+                                    <small class="help-block" style="margin-top:5px;">网站使用畅言必须提供备案号，否则只能使用15天</small>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label" for="icp"><strong>域名白名单</strong></label>
+                                <div class="controls">
+                                    <input class="input-xlarge valid" type="text" id="domainWhiteList" value="imhuyang.com" placeholder="示列:sohu.com,sohu.cn" aria-invalid="false">
+                                    <small class="help-block" style="margin-top:5px;">请输入您使用畅言代码的网站主域名，多个主域名之间用英文逗号隔开</small>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label"><strong>站点类型</strong></label>
+                                <div class="controls">
+                                    <select id="isv_Type" class="input-medium" name="isvType" data-rule-min="1" data-msg-min="请选择站点类型">
+                                        <option value="0">请选择类型</option>
+                                        <option value="1" selected="true">生活娱乐</option>
+                                        <option value="2">游戏动漫</option>
+                                        <option value="3">IT军事</option>
+                                        <option value="4">体育汽车</option>
+                                        <option value="5">影视文学</option>
+                                        <option value="6">新闻财经</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="control-group">
+                                    <label class="control-label"><strong>官方站点logo</strong></label>
+                                    <div class="controls">
+                                        <div class="row-fluid">
+                                            <div class="span2" style="width:80px;">
+                                                <input id="realisvlogoUrl" type="hidden" value="http://0d077ef9e74d8.cdn.sohucs.com/2c4fdbe5fd8dac849ff20c8ef682f128_1508071937782_jpeg">
+                                                <img id="isvlogoUrl" style="height:60px;width:94px" src="./通用基本配置_files/2c4fdbe5fd8dac849ff20c8ef682f128_1508071937782_jpeg" class="img-rounded">
+                                            </div>
+                                            <div class="margin-l-20" style="float:left;height:60px;width:400px;position:relative;">
+                                                 <span id="isvlogo_picker_container" style="position:absolute;top:20px;left:0px;"><button class="btn btn-mini" id="isvlogo_picker" style="position: relative; z-index: 0;">上传Logo</button><div id="p1bsi3gi221ln7jchaa7g47mf33_html5_container" class="plupload html5" style="position: absolute; background: transparent; width: 65px; height: 22px; overflow: hidden; z-index: -1; opacity: 0; top: 0px; left: 0px;"><input id="p1bsi3gi221ln7jchaa7g47mf33_html5" style="font-size: 999px; position: absolute; width: 100%; height: 100%;" type="file" accept="image/jpeg,image/png,image/gif"></div></span>
+                                                 <small class="help-inline" style="position:absolute;top:20px;left:70px;">支持jpg、png、gif格式，图片大小为94px*60px</small>
+                                            </div>
+                           
+                                        </div>
+                                    </div>
+                            </div>
+                            
+                            <div class="common-area-title">网站审核规则</div>
+                            <div class="control-group" style="margin-top:20px;">
+                                    <label class="control-label"><strong>评论审核规则</strong></label>
+                                    <div class="controls">
+                                                                                <div class="label_wrapper">
+                                            <label class="radio">
+                                                <input name="auditType" value="1" type="radio" checked="checked">先发后审(默认审核通过，立即显示)
+                                            </label>
+                                        </div>
+                                                                                <div class="label_wrapper">
+                                            <label class="radio">
+                                                <input name="auditType" value="2" type="radio">先审后发(通过站长后台审核才显示)
+                                            </label>
+                                        </div>
+                                        <div class="label_wrapper">
+                                            <label class="radio">
+                                                <input name="auditType" value="0" type="radio">全站关闭评论(所有文章将被关闭评论,且用户不能发表评论)
+                                            </label>
+                                        </div>
+                                    </div>
+                             </div>
+
+
+                            <div class="common-area-title">图片配置</div>
+                            <div class="control-group">
+                                 <label class="control-label"><strong>图片评论</strong></label>
+                                 <div class="controls">
+                                     <label class="checkbox">
+                                        <input name="supportCommentWithImg" type="checkbox" checked="checked">允许发带图片的评论
+                                     </label>
+                                 </div>
+                            </div>
+                             
+                             <div class="common-area-title">官方账号</div>
+                             
+                                                             <div class="control-group" style="margin-top:20px;">
+                                    <label class="control-label"><strong>官方账号昵称</strong></label>
+                                    <div class="controls">
+                                        <input id="official-nick" type="text" class="input-medium" name="officialNick">
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label"><strong>官方账号头像</strong></label>
+                                    <div class="controls">
+                                        <div class="row-fluid">
+                                                                                        <div class="span2" style="position:relative;">
+                                                <label class="radio" style="float:left">
+                                                    <input name="official-avatar-type" type="radio" value="0" checked="checked"><small>系统默认</small>
+                                                </label>
+                                                <img id="default-official-avartar-view" style="height:50px;width:50px;position:absolute;top:25px;left:0px;" src="./通用基本配置_files/oZPbLUU_png" class="img-rounded">
+                                            </div>
+                                            <div class="span8">
+                                                <input id="officialUrl" type="hidden" value="http://comment.bjcnc.img.sohucs.com/oZPbLUU_png">
+                                                <div class="row-fluid">
+                                                    <label class="radio" style="float:left">
+                                                        <input name="official-avatar-type" type="radio" value="1"><small>自定义头像</small>
+                                                    </label>
+                                                    <div class="margin-l-20" style="float:left">
+                                                        <span id="official_picker_container" style="position: relative;"><button class="btn btn-mini margin-l-20" id="official_picker" style="position: relative; z-index: 0;">上传文件</button><div id="p1bsi3gi15lk88fnfr3jj5oh0_html5_container" class="plupload html5" style="position: absolute; background: transparent; width: 62px; height: 22px; overflow: hidden; z-index: -1; opacity: 0; top: 0px; left: 20px;"><input id="p1bsi3gi15lk88fnfr3jj5oh0_html5" style="font-size: 999px; position: absolute; width: 100%; height: 100%;" type="file" accept="image/jpeg,image/png,image/gif"></div></span>
+                                                        <small class="margin-l-20">支持jpg、png、gif，50px*50px最佳</small>
+                                                    </div>
+                                                </div>
+                                                <img style="height:50px;width:50px" id="preview_official" src="./通用基本配置_files/oZPbLUU_png" class="img-rounded">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <div class="controls">
+                                        <input value="点击生成官方账号" type="button" class="btn" onclick="generateOfficial()">
+                                        <small class="help-inline">您的站点还没有官方账号，账号生成后会有缓存，再次更改账号信息需一小时后生效</small>
+                                    </div>
+                                </div>
+                                              
+                       
+                       <div class="control-group">
+                                <button class="cy-btn cy-btn-big" id="common-setting-save">保存设置</button>
+                                <small class="help-inline">因为页面缓存，设置将在15分钟后生效。</small>
+                       </div>        
+                       </form>
+                  </div>
+              </div>
+        </div>
+   </div>
+      
+
+
+
+<script type="text/javascript" src="./通用基本配置_files/head-bar-common.js"></script>
+<script>
+        plupload.addI18n({
+            'File extension error.' : '图片类型错误',
+            'File size error.' : '图片大小超过500k'
+        });   
+         
+             
+        //文件上传控件参数配置
+        var official_uploader = new plupload.Uploader({
+            runtimes : 'html5,flash',
+            browse_button : 'official_picker', //选择文件按钮ID 
+            container : 'official_picker_container',
+            max_file_size : '500kb',  //文件上传最大值
+            chunks : false,//不分块上传
+            unique_names : true,  // 上传的文件名是否唯一,只有在未进行分块上传时文件名唯一才有效
+            url: '/setting/upload/avatar/official', //提交到后台的url地址
+            flash_swf_url: '/platformstatic/js/lib/plupload/plupload.flash.swf',//plupload.flash.swf文件所在路径
+            multi_selection : false,
+            filters: [
+                    {title: "允许文件类型", extensions: "jpg,png,gif,jpeg"}
+            ],
+            init : {
+                FileUploaded : function(up, file, info) {
+                    official_uploader.disableBrowse(false);
+                    jQuery('#official_picker').text('上传文件');
+                    var data = eval('('+info.response+')');
+                    if (data.success) {
+                        jQuery('#officialUrl').val(data.url);
+                        jQuery('#preview_official').attr('src',data.url);
+                    }else{
+                        alert(data.msg);
+                    }
+    
+                },
+                FilesAdded : function(up, files){
+                    official_uploader.start();
+                },
+                BeforeUpload : function(up, file){
+                    official_uploader.disableBrowse(true);
+                },
+                UploadProgress : function(up, file) { 
+                    jQuery('#official_picker').val('上传中......');
+                },
+                QueueChanged : function(up){
+                },
+                Error : function(up, err) {
+                    official_uploader.disableBrowse(false);
+                    alert(err.message);
+                    up.refresh(); // Reposition Flash/Silverlight
+                }
+            }
+        });
+        official_uploader.init();
+        
+        
+        //文件上传控件参数配置
+        var isvlogo_uploader = new plupload.Uploader({
+            runtimes : 'html5,flash',
+            browse_button : 'isvlogo_picker', //选择文件按钮ID 
+            container : 'isvlogo_picker_container',
+            max_file_size : '500kb',  //文件上传最大值
+            chunks : false,//不分块上传
+            unique_names : true,  // 上传的文件名是否唯一,只有在未进行分块上传时文件名唯一才有效
+            url: '/setting/upload/isvlogo', //提交到后台的url地址
+            flash_swf_url: '/platformstatic/js/lib/plupload/plupload.flash.swf',//plupload.flash.swf文件所在路径
+            multi_selection : false,
+            filters: [
+                    {title: "允许文件类型", extensions: "jpg,png,gif,jpeg"}
+            ],
+            init : {
+                FileUploaded : function(up, file, info) {
+                    isvlogo_uploader.disableBrowse(false);
+                    var data = eval('('+info.response+')');
+                    if (data.success) {
+                        jQuery('#realisvlogoUrl').val(data.url);
+                        jQuery('#isvlogoUrl').attr('src',data.url);
+                    }else{
+                        alert(data.msg);
+                    }
+                },
+                FilesAdded : function(up, files){
+                    isvlogo_uploader.start();
+                },
+                BeforeUpload : function(up, file){
+                    isvlogo_uploader.disableBrowse(true);
+                },
+                UploadProgress : function(up, file) { 
+                    jQuery('#official_picker').val('上传中......');
+                },
+                QueueChanged : function(up){
+                },
+                Error : function(up, err) {
+                    isvlogo_uploader.disableBrowse(false);
+                    alert(err.message);
+                    up.refresh(); // Reposition Flash/Silverlight
+                }
+            }
+        });
+        isvlogo_uploader.init();
+        
+
+        function generateOfficial(){
+            var official_nick = jQuery('#official-nick').val();
+            var official_avatar;
+            if( jQuery('input[name=official-avatar-type]:checked' ).val() == 0 ){
+                official_avatar = 'http://comment.bjcnc.img.sohucs.com/oZPbLUU_png';
+            }
+            if( jQuery('input[name=official-avatar-type]:checked' ).val() == 1 ){
+                official_avatar = jQuery('#officialUrl').val();
+            }
+            if(!official_nick||!official_avatar){
+                alert('头像和昵称不能为空');
+                return;
+            }
+            jQuery.ajax({
+                url: '/setting/official-account/generate',
+                dataType: 'json',
+                type: 'post',
+                data: {
+                    officialNick: official_nick,
+                    officialAvatar: official_avatar
+                },
+                success: function(data){
+                    if(data.success){
+                        alert('生成成功，点击确定刷新页面');
+                        window.location.href = window.location.href;
+                    }else{
+                        alert(data.msg);
+                    }
+                },
+                error: function(){
+                    alert('生成失败');
+                }
+            });
+        }
+        
+        //绑定表单元素事件
+        jQuery('#isvUrl').on('blur', function() {
+            if (this.value && this.value.indexOf('http://') < 0) {
+                this.value = 'http://' + this.value;
+            }
+        });
+       
+        jQuery('input[name=official-avatar-type]').click(function(){
+            var val = jQuery(this).val();
+            if(val > 0){
+                official_uploader.disableBrowse(false);
+            }else{
+                official_uploader.disableBrowse(true);
+            }
+        })
+        
+       
+        jQuery('#config_form').validate({
+            errorClass :"input-error",
+            rules: {
+                icp: {
+                    required: "请务必填写正确，我们将对你提供的网址和ICP备案号进行核查"
+                }
+            }
+        });
+        jQuery('#common-setting-save').on('click', function(){
+            var param = {};
+            param['isv.name'] = jQuery('#isvName').val();
+            param['isv.url'] = jQuery('#isvUrl').val();
+            param['icp'] = jQuery('#icp').val();
+            param['config.only_app'] = jQuery('input[name=onlyApp]').attr('checked') === 'checked';
+            param['config.domain_whitelist'] = jQuery('#domainWhiteList').val();
+            param['isv.auditMode'] = jQuery('input[name=auditType]:checked').val();
+            param['isvType'] = jQuery("#isv_Type  option:selected").text();
+            param['logoUrl'] = jQuery('#realisvlogoUrl').val();
+            param['config.allow_upload_img'] = jQuery('input[name=supportCommentWithImg').attr('checked') == 'checked' ? 1 : 0;
+            //验证账号登录配置项
+            jQuery.ajax({
+                url : '/setting/common/basic/update',
+                type : 'post',
+                dataType : 'json',
+                data : param,
+                success : function(data){
+                    if(data.success){
+                        alert('保存成功!\r\n因为页面有15分钟的缓存，所以设置不会马上生效。\r\n您可以发一条新评论来刷新缓存 :)');
+                        //window.location.reload();
+                    }else{
+                        alert('保存失败');
+                    }
+                },
+                error : function(err){
+                    console.log(err);
+                    alert('保存失败');
+                }
+            });
+        });
+        
+        function updateOfficial(){
+            var official_nick = jQuery('#official-nick').val();
+            var official_avatar;
+            console.log( jQuery('input[name=official-avatar-type]').val() );
+            if( jQuery('input[name=official-avatar-type]:checked' ).val() == 0 ){
+                official_avatar = 'http://comment.bjcnc.img.sohucs.com/oZPbLUU_png';
+            }
+            if( jQuery('input[name=official-avatar-type]:checked' ).val() == 1 ){
+                official_avatar = jQuery('#officialUrl').val();
+            }
+            if(!official_nick||!official_avatar){
+                alert('头像和昵称不能为空');
+                return;
+            }
+            jQuery.ajax({
+                url: '/setting/official-account/update',
+                type: 'post',
+                dataType: 'json',
+                data: {
+                    officialNick: official_nick,
+                    officialAvatar: official_avatar
+                },
+                success: function(data){
+                    if(data.success){
+                        alert('更新成功');
+                    }else{
+                        alert('更新失败');
+                    }
+                }
+            });
+        }
+        jQuery(document).ready(function(){
+            (function(){
+                var isOnlyApp = jQuery('input[name=onlyApp]').attr('checked') === 'checked';
+                if (isOnlyApp) {
+                    jQuery('#isvUrl').attr('disabled', 'disabled');
+                    jQuery('#isvUrl').css('background-color', '#e3e3e3');
+                }
+                if (true) {
+                    jQuery('#icp').attr('disabled', 'disabled');
+                    jQuery('#icp').css('background-color', '#e3e3e3');
+                }
+                
+                jQuery('input[name=onlyApp]').click(function(){
+                    if (jQuery('input[name=onlyApp]').attr('checked') === 'checked') {
+                        jQuery('#isvUrl').attr('disabled', 'disabled');
+                        jQuery('#isvUrl').css('background-color', '#e3e3e3');
+                    } else {
+                        jQuery('#isvUrl').removeAttr('disabled');
+                        jQuery('#isvUrl').css('background-color', '#fff');
+                    }
+                });
+            }());
+        });        
+</script>
+
+</body></html>

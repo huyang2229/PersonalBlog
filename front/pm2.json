@@ -1,0 +1,22 @@
+{
+  "apps": [
+  {
+    "name": "frontend",
+    "script": "production.js",
+    "cwd": "",
+    "exec_mode": "cluster",
+    "instances": 0,
+    "max_memory_restart": "300M",
+    "max_restarts": 100,
+    "watch": true,
+    "autorestart": true,
+    // "error_file": "./test-err.log",
+    // "out_file": "./test-out.log",
+    "pid_file": "./test-pid.log",
+    "node_args": [],
+    "args": [],
+    "env": {
+      "NODE_ENV": "production"
+    }
+  }]
+}

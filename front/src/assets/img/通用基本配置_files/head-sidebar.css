@@ -1,0 +1,605 @@
+ .head {
+    width : 100%;
+    height : 75px;
+    background-color: #51acf9;
+    position : relative;
+  }
+
+  .container-self {
+    width : 100%;
+    position : relative;
+    background-color:#f6f6f6;
+  }
+
+  .side-bar {
+    width : 175px;
+    height : 100%;
+    position : absolute;
+    background-color: black;
+    height : 1000px;
+  }
+
+  .content {
+     margin-left : 175px;
+  }
+
+  .head-logo {
+     width : 175px;
+     height : 100%;
+     background:url(../image/logo.png) no-repeat 50% 50% ;
+     background-color: #4ea5ef;
+     cursor : pointer;  
+  }
+
+  .head-nav {
+     height : 75px;
+     float : right;
+     position : absolute;
+     right : 32px;
+     top : 0px;
+  }
+
+.head-nav ul {
+  font-size : 16px;
+  color : white;
+  height : 100%;
+  text-align: center;
+  line-height: 75px;
+}
+
+.head-nav ul li {
+  list-style : none;
+  float : left;
+  padding:0 30px;
+  height : 100%;
+  line-height: 75px;
+  cursor: pointer;
+}
+
+  .head-nav ul li:hover {
+    background-color: #4099e5;
+  }
+  
+  .head-nav ul li a{
+    text-decoration: none;
+    color:#ffffff;
+  }
+
+  .head-nav ul li:hover .notice-info-prop {
+    display : block;
+  }
+
+  .head-account-info {
+    width : 90px;
+    margin-right : 10px;
+    float : left;
+    height : 100%;
+    line-height: 75px;
+    color : white;
+    font-size : 16px;
+  }
+
+  .head-account-button {
+      width : 20px;
+      float : left;
+      height : 100%;
+      background: url(../image/arrow.png) no-repeat 70% 52%;
+      position : relative;
+  }
+
+  .side-bar ul {
+      margin-top : 20px;
+      margin-left : 0px;
+      line-height: 25px;
+  }
+
+  .side-bar ul li {
+      cursor: pointer;
+      padding-left: 30px;
+      height: 50px;
+      line-height: 50px;
+      font-size: 16px;
+      color: white;
+      position: relative;
+  }
+  
+  .side-bar-icon {
+      margin-right: 20px;
+      margin-bottom: 2px;
+   }
+  
+  .side-bar ul li .active{
+    display: block;
+  }
+
+.notice-text{
+  margin-right: 5px;
+}
+.notice-count {
+  display:inline-block;
+  height : 24px;
+  line-height: 24px;
+  border-radius: 3px;
+  background-color: #164f9b;
+  text-align: center;
+  padding:1px 5px;
+  font-size: 14px;
+}
+
+.head-count-prop {
+  position:absolute;
+  top : 75px;
+  right : 0px;
+  display: none;
+  z-index: 10;
+}
+
+
+.open-arrow {
+    position:absolute;
+    width : 10px;
+    height : 100%;
+    right : 10px;
+    top : 0px;
+    background-image : url('../image/bottom-arrow.png');
+    background-repeat:no-repeat;
+    background-position:center;
+  }
+  
+.close-arrow {
+    position:absolute;
+    width : 10px;
+    height : 100%;
+    right : 10px;
+    top : 0px;
+    background-image : url('../image/left-arrow.png');
+    background-repeat:no-repeat;
+    background-position:center;
+}
+  
+
+
+
+  .pc-setting-wrapper {
+    width : 96%;
+    padding : 2%;
+  }
+
+  .notice-info-prop {
+  position: absolute;
+  top : 75px;
+  left : -142px;
+  width : 450px;
+  border : 1px solid #ededed;
+  z-index : 2;
+  border-top : none;
+  border-radius:0px 0px 5px 5px;
+  background-color: #ffffff;
+  display: none;
+  box-shadow : 0px 0px 10px #d9d9d9;
+}
+
+.notice-info-prop .single-notice-info {
+  height : 50px;
+  line-height : 50px;
+  border-bottom: 1px solid #ededed;
+  border-right : none;
+  border-left : none;
+}
+
+.notice-info-prop .single-notice-info span{
+  color:#676767;
+  font-size: 12px;
+  width : 350px;
+  height : 55px;
+  line-height: 55px;
+  text-align: left;
+  display: inline-block;
+}
+
+.notice-info-prop .single-notice-info a {
+  font-size: 12px;
+  width : 120px;
+  height : 55px;
+  line-height: 55px;
+  text-align: center;
+  color : #39a4ff;
+  text-decoration: none;
+}
+.notice-info-prop .single-notice-info a:hover{
+  color:;
+  text-decoration: underline;
+}
+
+.notice-info-prop:after {
+  content:'';
+  position:absolute;
+  border:10px solid transparent;
+  border-bottom-color:white;
+  top:-20px;
+  left:214px;
+}
+.notice-show-all{  
+  height:50px;
+  line-height: 50px;
+}
+.head-nav ul li .notice-show-all a{
+  color:black;
+  font-size: 14px;
+}
+
+.head-nav ul li .notice-show-all a:hover{
+  text-decoration: underline;
+  color:black;
+}
+
+  .modal-notice-header {
+    height : 40px;
+    background-color: #51acf9;
+    border-radius: 2px;
+}
+
+/*bootstrap modal 自定义修改*/
+.modal-header {
+  height : 30px;
+  line-height: 30px;
+  color:white;
+  font-size: 16px;
+  background-color: #51acf9;
+  border-radius: 6px 6px 0 0;
+}
+.modal-body{
+  padding: 20px 30px 30px 30px;
+}
+.close{
+  color:white;
+  opacity:1;
+  text-shadow:0 1px 0 white;
+  height:30px;
+  line-height: 30px;
+  font-weight: normal;
+  font-size:25px;
+}
+
+/*
+first nav和second nav样式
+*/
+.common-area {
+    margin-top: 20px;
+    border: 1px solid #ededed;
+    box-shadow: 0px 0px 2px #ececec;
+    margin-bottom: 20px;
+    background-color: white;
+    padding:40px;
+}
+
+.common-area-title {
+    height : 75px;
+    text-align: left;
+    border-bottom: 2px solid #ededed;
+    font-size : 20px;
+    color : #39a4ff;
+    line-height : 90px;
+    font-weight: bold;
+  }
+  
+  .common-area-wrapper {
+    width : 96%;
+    padding : 2%;
+  }
+  
+  .control-group:first-child {
+    margin-top : 20px;
+  }
+  
+  .common-setting-nav li a {
+    color : white;
+  }
+  
+  .notice-manage-nav li a {
+    color : white;
+  }
+  
+  .vip-manage-nav li a {
+    color : white;
+  }
+  
+  .second-nav li a {
+    color : black;
+    display : block;
+  }
+  
+  .second-nav li a:link {
+    text-decoration:none;
+  }
+  .second-nav li a:visited {
+    text-decoration:none;
+  }
+  .second-nav li a:hover{ 
+    text-decoration:none; 
+  } 
+
+  .second-nav {
+  background-color: white;
+  width : 100%;
+  height : 40px;
+  border-radius: 2px;
+  margin-top : 20px;
+  margin-right: 0px;
+  margin-left : 0px;  
+  border: 1px solid #ededed;
+  box-shadow: 0px 0px 2px #ececec;  
+  }
+
+  .second-nav li {
+    list-style: none;
+    height : 100%;
+    width : 230px;
+    float : left;
+    background-color: #ffffff;
+    text-align: center;
+    line-height: 40px;
+    font-size: 16px;
+    color : black;
+    position : relative;
+  }
+
+  .blue-horizontal-line {
+    position : absolute;
+    height : 2px;
+    width : 230px;
+    background-color: #39a4ff;
+    bottom: 0px;
+    left : 0px;
+    display: none;
+  }
+  
+
+  .second-nav .active{
+    display: block;
+  }
+  
+  .hide {
+    display : none;
+  }
+  
+  .system-setting-sub {
+    margin : 0px;
+  }
+  
+  .comment-audit-nav {
+    margin-top : 0px !important;
+  }
+  
+  .comment-audit-nav a {
+    color : white;
+    text-decoration : none;
+  }
+  
+  .comment-manage-nav {
+    margin-top : 0px !important;
+  }
+  
+  .comment-manage-nav a {
+    color : white;
+    text-decoration : none;
+  }
+  
+  .li-active {
+    background-color : rgb(71, 71, 71) !important;
+  }
+  
+  .comment-stat-nav {
+    margin-top : 0px !important;
+  }
+  
+  .comment-stat-nav a {
+    color : white;
+    text-decoration : none;
+  }
+  
+  .common-setting-nav {
+    margin-top : 0px !important;
+  }
+  
+  .common-setting-nav a {
+    color : white;
+    text-decoration : none;
+  }
+  
+  .install-changyan-nav {
+    margin-top : 0px !important;
+  }
+  
+  .install-changyan-nav a {
+    color : white;
+    text-decoration : none;
+  }
+  
+  .zhanghao-manage-nav {
+    margin-top : 0px !important;
+  }
+  
+  .zhanghao-manage-nav a {
+    color : white;
+    text-decoration : none;
+  }
+  
+  .advert-manage-nav {
+    margin-top : 0px !important;
+  }
+  
+  .advert-manage-nav a {
+    color : white;
+    text-decoration : none;
+  }
+  
+  .labs-plugin-nav {
+    margin-top : 0px !important;
+  }
+  
+  .labs-plugin-nav a {
+    color : white;
+    text-decoration : none;
+  }    
+  
+  .notice-manage-nav {
+    margin-top : 0px !important;
+  }
+  
+  .vip-manage-nav {
+    margin-top : 0px !important;
+  }
+  
+  .notice-manage-nav a {
+    color : white;
+    text-decoration : none;
+  }
+  
+  .vip-manage-nav .current {
+    background-color: #4ea5ef;
+  }
+  
+  .vip-manage-nav a {
+    color : white;
+    text-decoration : none;
+  }     
+  
+  .right-sub-li {
+    background-color : #3a3939;
+    font-size: 14px !important;
+    padding: 0px !important;
+    height: 40px !important;
+    line-height: 40px !important;
+  }
+  
+
+  
+  .comment-audit-nav .current {
+    background-color : #4ea5ef;
+  }
+  
+  .comment-manage-nav .current {
+    background-color : #4ea5ef;
+  }
+  
+  .comment-stat-nav .current {
+    background-color : #4ea5ef;
+  } 
+  
+  .common-setting-nav .current {
+    background-color : #4ea5ef;
+  }
+  
+  .labs-plugin-nav .current {
+    background-color : #4ea5ef;
+  } 
+  
+  .install-changyan-nav .current {
+    background-color : #4ea5ef;
+  } 
+  
+  .zhanghao-manage-nav .current {
+    background-color : #4ea5ef;
+  }
+  
+  .advert-manage-nav .current {
+    background-color : #4ea5ef;
+  } 
+  
+   .notice-manage-nav .current {
+    background-color : #4ea5ef;
+  }   
+  
+  
+/*head右侧账号区域*/
+.head-user-name{
+  text-align: center;
+}
+
+.head-account:hover .head-account-link{
+  display:block;
+}
+.head-account-link {
+  width:100%;
+  position: absolute;
+  top : 75px;
+  left : 0px;
+  z-index : 2;
+  border-top : none;
+  background-color: #4099e5;
+  display: none;
+  border-radius:0 0 5px 5px;
+}
+.head-account-link-w{
+  height:40px;
+  line-height: 40px;
+  border-top:1px solid #5cb2fb;
+  font-size: 16px;
+}
+
+.right-sub-li a {
+  display : block;
+  width : 175px;
+  font-size : 14px;
+  text-indent : 64px;
+  height : 40px !import;
+  line-height : 40px !import;
+  box-sizing : content-box;
+}
+  
+  .notice{
+      padding: 15px;
+      background-color: #feffbd;
+      border:1px solid #fef200;
+      margin:30px auto;
+      line-height: 25px;
+   }
+   
+   .audit-number {
+      width:30px;
+      height:20px;
+      line-height:20px;
+      background-color:#ff5e5e;
+      display:inline-block;
+      border-radius:5px;
+      color:white;
+      text-indent:0px;
+      text-align:center;
+      margin-right:10px;
+      font-size : 12px;
+   }
+   
+   .no-audit-number {
+      width:30px;
+      height:20px;
+      line-height:20px;
+      background-color:none;
+      display:inline-block;
+      text-indent:0px;
+      text-align:center;
+      margin-right:10px;
+   }
+   
+   .sub-audit-number {
+      width:30px;
+      height:20px;
+      line-height:20px;
+      border-radius:5px;
+      color:white;
+      display:inline-block;
+      background-color:#ff5e5e;
+      margin-left:10px;
+   }
+   
+   .red-dot {
+      position:absolute;
+      left:10px;
+      width:8px;
+      height:8px;
+      border-radius:8px;
+      top:22px;
+      background-color:#ff5e5e;
+   }
+
+

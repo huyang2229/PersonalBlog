@@ -1,0 +1,394 @@
+﻿.container{
+	min-height: 800px;
+	width: 930px;
+}
+.cyan-nav{
+    background-image: linear-gradient(to bottom,#6997b5,#5a84a7);
+    background-image: -moz-linear-gradient(top,#6997b5,#5a84a7);
+	background-image: -webkit-gradient(linear,0 0,0 100%,from(#6997b5),to(#5a84a7));
+	background-image: -webkit-linear-gradient(top,#6997b5,#5a84a7);
+	background-image: -o-linear-gradient(top,#6997b5,#5a84a7);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#6997b5',endColorstr='#5a84a7',GradientType=0);
+    border: none;
+    height: 50px;
+}
+.cyan-nav ul.nav li a{
+	height: 25px;
+	padding-top: 15px;
+}
+.cyan-nav .nav li a{
+	color: #ffffff;
+	text-shadow: none;
+}
+.cyan-nav .nav li.active a{
+	background-color: #ecf3f8;
+	border-color: transparent;
+}
+.cyan-nav .navbar-form select{
+	margin-top: 10px;
+}
+.padding-l-40,.navbar .nav>li>a.padding-l-40{
+	padding-left: 20px;
+}
+.padding-r-40,.navbar .nav>li>a.padding-l-40{
+    padding-right: 20px;
+}
+.margin-l-20{
+	margin-left: 20px;
+}
+.margin-r-20{
+	margin-right: 20px;
+}
+/*评论页css begin*/
+ul.audit-tool-bar li{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.head-topic-titile{
+	display: inline-block;
+	width: 600px;
+    overflow: hidden;
+    white-space: nowrap; 
+    -o-text-overflow: ellipsis;     
+    text-overflow: ellipsis;
+    color:rgb(0, 136, 204);
+    cursor: pointer;
+}
+
+.topic-title{
+	display: inline-block;
+	overflow: hidden;
+	white-space: nowrap; 
+	-o-text-overflow: ellipsis;     
+    text-overflow: ellipsis;
+    position: ralative;
+}
+.cmt-info{
+	width: 17%;
+}
+.cmt-info p{
+	margin-bottom: 5px;
+}
+
+.cmt-content{
+	word-break:break-all; /*支持IE，chrome，FF不支持*/
+　　word-wrap:break-word;/*支持IE，chrome，FF*/
+    font-size: 16px;
+}
+.attach-img{
+    max-width:150px;
+    max-height:150px;
+    _height:150px;
+    _width:150px;
+}
+.cmt-main blockquote{
+	word-break:break-all; /*支持IE，chrome，FF不支持*/
+　　word-wrap:break-word;/*支持IE，chrome，FF*/
+}
+.table td.cmt-operation{
+	vertical-align: middle;
+	width: 10%;
+}
+.cbox-wrap{width:25px;height:25px;display:inline-block;background:url("../images/bg-checkbox.gif") no-repeat;}
+.cbox-wrap .wrap-check{margin-left:-999999px;}
+.cbox-wrap-pass-click{background:url("../images/bg-checkbox-checked.gif") no-repeat;}
+.cbox-wrap-del-click{background:url("../images/bg-checkbox-del.gif") no-repeat;}
+.audit-btn{padding-left: 30px;padding-right: 30px;}
+table p{word-break: break-all}
+#check-mode,#page-size,#view-mode{
+width:150px;
+}
+/*评论页css end*/
+/* 设置页css begin */
+.config-form .control-label{
+	text-align: left;
+	width: 25%;
+}
+.config-form .label_wrapper{
+	height: 30px;
+}
+.config-form .page-header,.install .page-header{
+	margin-bottom:15px;
+	padding-bottom: 0px;
+	border-bottom-color: #ddd;
+}
+.config-form .help-block,.config-form .help,.help-inline{
+	color:#999;
+}
+ 
+.config-form label{
+	display:inline-block;
+}
+.config-form .disable{
+	cursor: auto;
+}
+.config-form h3,.install h3{
+	font-family: "microsoft yahei";
+	color: #5788aa;
+	font-size: 20px;
+}
+.install section{
+	margin-bottom: 50px;
+}
+.config-form .controls{
+	margin-left: 25%;
+}
+.config-form section{
+	margin-bottom: 50px;
+}
+.apply-form .control-label{
+	text-align: left;
+	width: 100px;
+}
+.apply-form .controls{
+	margin-left: 100px;
+}
+[class^="icon-login-"]{
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	margin-top: 1px;
+	line-height: 14px;
+	vertical-align: text-top;
+	background-image: url("../images/login_logo.gif");
+	background-repeat: no-repeat;
+}
+.icon-login-3{
+	background-position: 0 -40px;
+}
+.icon-login-2{
+    background-position: 0 -20px;
+}
+.icon-login-11{
+	background-position: 0 -200px;
+}
+.icon-login-6{
+	background-position: 0 -100px;
+}
+.icon-login-13{
+	background-image: url("../images/ico13.png");
+	background-size:100% 100%;
+	background-position: 0 0;
+}
+.icon-login-15{
+	background-image: url("../images/ico15.png");
+	background-size:100% 100%;
+	background-position: 0 0;
+}
+.form-horizontal  .input-error{
+	border-color: #b94a48;
+	width:334;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+	-moz-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+	box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+}
+.form-horizontal  label.input-error{
+	font-size:12px;
+	color:red;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+}
+.mobile-conf-form .control-label{
+	width: 15%;
+}
+.mobile-conf-form .controls{
+	margin-left: 15%;
+}
+.radios2{
+	float:left;
+	text-align:center;
+	margin-right:300px;
+	margin-top:10px;
+}
+
+
+.light_bg_img,
+.deep_bg_img{
+margin-top:10px;
+margin-bottom:10px;}
+.light_bg_img img,
+.deep_bg_img img{
+width:550px; 
+height:450px; 
+display:none;
+border:0;
+}
+
+.light_bg_img img,
+.deep_bg_img img{
+    border:1px solid rgb(225, 225, 225);
+}
+.light_btn_img .light_btn_img1,
+.light_btn_img .light_btn_img2,
+.light_btn_img .light_btn_img3,
+.light_btn_img .light_btn_img4,
+.light_btn_img .light_btn_img5,
+.light_btn_img .light_btn_img6,
+.deep_btn_img .deep_btn_img1,
+.deep_btn_img .deep_btn_img2,
+.deep_btn_img .deep_btn_img3
+{
+height:18px;
+width:35px;
+cursor:pointer;
+border:0;
+margin:5px;
+border-radius:7px;
+background-repeat:no-repeat;
+background-position:center;
+outline:none;
+}
+.light_btn_img .light_btn_img1{
+background-color:#4398ed;
+}
+.light_btn_img .light_btn_img2{
+background-color:#e74851}
+.light_btn_img .light_btn_img3{
+background-color:#fca222}
+.light_btn_img .light_btn_img4{
+background-color:#313131}
+.light_btn_img .light_btn_img5{
+background-color:#5FBF5F}
+.light_btn_img .light_btn_img6{
+background-color:#959595}
+
+.deep_btn_img .deep_btn_img1{
+background-color:#4398ed
+}
+.deep_btn_img .deep_btn_img2{
+background-color:#e74851
+}
+.deep_btn_img .deep_btn_img3{
+background-color:#FFF;
+border:1px solid #999;
+}
+
+/* 设置页css end */
+/*权限管理页css begin*/
+.channel-grant-list {
+	padding-left: 20px;
+}
+/*权限管理页css end*/
+/* 评论导出页css begin */
+.export-form .control-label{
+    text-align: left;
+    width: 12%;
+}
+.export-form .controls{
+    margin-left: 12%;
+}
+.export-form .control-group{
+	margin-bottom: 10px;
+}
+/* 评论导出页css end */
+.quick-time-range{
+	margin-left: 0px;
+	margin-right: 0px;
+}
+input[readonly]{
+	background-color:white;
+}
+
+.main{width:50px;}
+b.rounder{display:block;background: #FFF}
+b.rounder b{display:block;height:0px;overflow: hidden; background: #99cc33;}
+b.r1{margin: 0 0px}
+b.r2{margin: 0 0px}
+.contentX{height:16px;text-align:center; padding-top:0px; background:#e67e22;font-size:12px;}
+.contentY{height:16px;text-align:center; padding-top:0px; background:#333333;font-size:12px;}
+.contentZ{height:16px;text-align:center; padding-top:0px; background:#27ae60;font-size:12px;}
+.contentW{height:16px;text-align:center; padding-top:0px; background:#124e8c;font-size:12px;}
+
+.pc_anonymous .controls .controls {
+	margin-left: 10%;
+	margin-bottom: 10px;
+}
+.pc_anonymous .controls .control-label {
+	font-size: 12px;
+	width: 15%;
+}
+
+
+/*
+  新增css
+*/
+.cy-btn {
+    display: inline-block;
+    padding: 4px 12px;
+    text-align: center;
+    font-size : 14px;
+    line-height: 20px;
+    cursor: pointer;
+    color : #fff;
+    border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);
+    border-bottom-color: #b3b3b3;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    background-color: #4398ed;
+}
+.cy-btn:hover{
+    background-color:#3c89d5;
+}
+
+.cy-btn-big {
+    width : 160px;
+    height : 40px;
+}
+.cy-btn-big:hover{
+    background-color:#3c89d5;
+}
+
+.cy-btn-reset {
+    width : 160px;
+    height : 40px;
+    background-color:#A9A9A9;
+}
+.cy-btn-reset:hover{
+    background-color:#8E8E8E;
+}
+
+.controls input {
+	box-sizing : content-box;
+}
+
+.span-help {
+    width : 20px;
+    height : 18px;
+    background-image: url(../image/wenhao.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    float : none;
+}
+
+.span-help .help-pop {
+    width: 330px;
+    border: 1px solid #e9eff5;
+    background-color: #FFF;
+    color: #000;
+    font-size: 14px;
+    font-family: 'Microsoft YaHei';
+    line-height: 20px;
+    position: absolute;
+    top: -16px;
+    left: 30px;
+    box-shadow: 0 0 5px #C0C0C0;
+    display: none;
+    z-index: 2;
+}
+
+.span-help:hover .help-pop{
+    display: block;
+}
+
+.labelA{
+    float:left;
+    margin-right:40px;
+}
+.labelB{
+    float:left;
+    margin-right:200px;
+}

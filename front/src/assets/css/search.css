@@ -1,0 +1,72 @@
+.search-title {
+	font-size: 2em;
+	line-height: 2em;
+	color: #000;
+	font-weight: 500;
+	padding-top: 20px;
+}
+.entry-content {
+	width: 100%;
+}
+#search {
+	width: 100%;
+	position: relative;
+}
+#search #keyword {
+	-webkit-appearance: none;
+	border: 1px solid #bbb;
+	height: 40px;
+	outline: 0;
+	width: 100%;
+	padding-left: 10px;
+	outline: 0;
+}
+#search .submit {
+	-webkit-appearance: none;
+	background: #e7e7e7;
+	border: 1px solid #bbb;
+	border-left: 0;
+	color: #000;
+	display: block;
+	width: 72px;
+	height: 40px;
+	border-radius: 0;
+	outline: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+
+#searchResult .info {
+	padding: 15px 0;
+	border-bottom: 1px solid #dedede;
+}
+
+#searchResult .no-search-result {
+	padding: 5px;
+	margin: 15px 0;
+	border: 1px solid #fc3;
+	background: #fff4c2;
+}
+
+#searchResult .item {
+	padding: 10px 0 20px;
+	border-bottom: 1px solid #dedede;
+}
+#searchResult .item .title {
+	font-size: 15px;
+	margin: 5px 0;
+}
+#searchResult .item .desc {
+	font-size: 14px;
+	overflow: hidden;
+}
+#searchResult .item .summary {
+	line-height: 20px;
+	max-height: 80px;
+}
+#searchResult .item b {
+	color: #c00;
+	font-weight: 500;
+}

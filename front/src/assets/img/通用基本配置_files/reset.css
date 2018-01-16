@@ -1,0 +1,42 @@
+* {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+	font-family: '微软雅黑';
+    
+    transition:background-color 0.3s linear;
+}
+body{    
+    background:#f5f5f5;
+}
+
+ul {
+    list-style:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    border:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+div {
+    display : block;
+}
+
+.clear {
+	*zoom: 1;
+}
+
+.clear:after {
+	content: ".";
+	visibility: hidden;
+	clear: both;
+    height : 0;
+    display: block;
+	*zoom: 1;
+}

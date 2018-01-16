@@ -1,0 +1,158 @@
+#top {
+	background: #fff;
+	position: relative;
+}
+.header-inner {
+	height: 100%;
+	position: relative;
+}
+.outer {
+	max-width: 1320px;
+	margin:0 auto;
+	padding: 0 20px;
+}
+#top a{
+	white-space: nowrap;
+	-webkit-transition: 0.2s ease;
+	-moz-transition: 0.2s ease;
+	-ms-transition: 0.2s ease;
+	transition: 0.2s ease;
+	color: #565a5f;
+	background-color: white;
+}	
+.header-inner #logo {
+  display: inline-block;
+  /*width: 100%;*/
+  /*text-align: center;*/
+  font-weight: 800;
+  font-size: 24px;
+  vertical-align: top;
+  display: inline-block;
+  font-family: "open sans", "Helvetica Neue", "Microsoft Yahei", Helvetica, Arial, sans-serif;
+}
+.header-inner #logo, #main-nav {
+	float: left;
+}
+.header-inner #logo, #main-nav, #sub-nav, #search-form-wrap {
+	line-height: 40px;
+	padding: 12px 15px 0 15px;
+}
+.header-inner #logo .logo {
+	margin-right: 5px;
+	display: inline-block;
+}
+#logo .site-title {
+	/*margin-left: 20px;*/
+	font-size: 16px;
+	display: inline-block;
+	vertical-align: top;
+	font-weight: 800;
+	font-family: 'Comic Sans MS', cursive;
+}
+.logo {
+	width: 40px;
+	height: 40px;
+	background-repeat: no-repeat;
+	background-image: url("../img/logo.svg");
+	background-size: 40px 40px;
+	display: flex;
+}
+.main-nav-link {
+	font-weight: 400;
+}
+.nav-icon, .main-nav-link {
+	float: left;
+	display: block;
+	padding: 0 15px;
+}
+#sub-nav, #search-form-wrap {
+	float: right;
+}
+#search-form-wrap .search-form {
+	position: relative;
+}
+#search-form-wrap .search-form .search-form-input {
+	width: 100%;
+	padding: 0 30px 0 15px;
+	line-height: 40px;
+	height: 40px!important;
+	border-radius: 20px;
+}
+#search-form-wrap .search-form {
+  position: relative;
+}
+#search-form-wrap .search-form .search-form-input {
+  width: 160px;
+  padding: 0 30px 0 15px;
+  line-height: 40px;
+  height: 40px !important;
+  -webkit-border-radius: 21px;
+  border-radius: 21px;
+  opacity: 0.6;
+  transition: all 0.3s;
+}
+#search-form-wrap .search-form .search-form-input:hover {
+	width: 200px;
+	opacity: 1;
+	transition: all 0.3s;
+}
+#search-form-wrap .search-form .search-form-input::-webkit-search-results-decoration,
+#search-form-wrap .search-form .search-form-input::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+#search-form-wrap .search-form .search-form-submit {
+  top: 50%;
+  right: 15px;
+  border: none;
+  cursor: pointer;
+  margin-top: -7px;
+  background: none;
+  position: absolute;
+}
+#search-form-wrap .search-form .search-form-submit:hover,
+#search-form-wrap .search-form .search-form-submit:focus {
+  color: #777;
+}
+.search-form-input,
+.search-form-input.ins-search-input,
+.search-form-input.st-ui-search-input,
+.search-form-input.st-default-search-input {
+  -webkit-appearance: textarea;
+  -webkit-appearance: textarea;
+  -moz-appearance: textarea;
+  appearance: textarea;
+  padding: 0;
+  width: 200px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  color: #565a5f;
+  -webkit-transition: 0.2s ease;
+  -moz-transition: 0.2s ease;
+  -ms-transition: 0.2s ease;
+  transition: 0.2s ease;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  height: auto !important;
+  line-height: 1.6em;
+  outline: none !important;
+  background: none !important;
+  font: 14px "open sans", "Helvetica Neue", "Microsoft Yahei", Helvetica, Arial, sans-serif;
+  border: 1px solid #eceff2 !important;
+}
+.search-form-input:focus,
+.search-form-input.ins-search-input:focus,
+.search-form-input.st-ui-search-input:focus,
+.search-form-input.st-default-search-input:focus {
+  border-color: #38b7ea !important;
+}
+.search-form-input::-webkit-search-results-decoration,
+.search-form-input.ins-search-input::-webkit-search-results-decoration,
+.search-form-input.st-ui-search-input::-webkit-search-results-decoration,
+.search-form-input.st-default-search-input::-webkit-search-results-decoration,
+.search-form-input::-webkit-search-cancel-button,
+.search-form-input.ins-search-input::-webkit-search-cancel-button,
+.search-form-input.st-ui-search-input::-webkit-search-cancel-button,
+.search-form-input.st-default-search-input::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
