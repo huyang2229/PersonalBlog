@@ -195,13 +195,14 @@ config.flushOption().then(() => {
       if (isProd && typeof context.chunkName === 'string') {
         for (let key in chunkObj) {
           if (key.split('.')[0] === context.chunkName) {
-            const chunk = `<script type="text/javascript" charset="utf-8">${chunkObj[key]}</script><script src="https://js.fundebug.cn/fundebug.0.3.3.min.js" apikey="c46b2e90b24f72a6e0d6e9a9e6582074013cf8fd7e1e212a56f25edb7a898bc2"></script>
-</body>`
+            const chunk = `<script type="text/javascript" charset="utf-8">${chunkObj[key]}</script></body>`
             tail = tail.replace('</body>', chunk)
             break
           }
         }
       }
+      const fundebug = '<script src="https://js.fundebug.cn/fundebug.0.3.3.min.js" apikey="c46b2e90b24f72a6e0d6e9a9e6582074013cf8fd7e1e212a56f25edb7a898bc2" defer></script></body>'
+      tail = tail.replace('</body>', fundebug)
       res.end(tail)
       log.debug(`whole request: ${Date.now() - s}ms`)
     })
